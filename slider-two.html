@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider two</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+
+    <div class="flex justify-center items-center mt-[10%] mx-auto">
+        <img id="backBtn" class="rotate-180" src="right-arrow.png" alt="">
+        <div id="scrollCont" class="flex w-[600px] overflow-hidden ">
+            <div class="grid grid-cols-3 gap-5 w-full flex-none p-3">
+                <img class="w-full grayscale-100 transition transform duration-200 hover:grayscale-[0%] hover:scale-[1.1]" src="https://picsum.photos/id/37/200/300" alt="">
+                <img class="w-full grayscale-100 transition transform duration-200 hover:grayscale-[0%] hover:scale-[1.1]" src="https://picsum.photos/id/44/200/300" alt="">
+                <img class="w-full grayscale-100 transition transform duration-200 hover:grayscale-[0%] hover:scale-[1.1]" src="https://picsum.photos/id/50/200/300" alt="">
+            </div>
+    
+            <div class="grid grid-cols-3 gap-5 w-full flex-none p-3">
+                <img class="w-full grayscale-100 transition transform duration-200 hover:grayscale-[0%] hover:scale-[1.1]" src="https://picsum.photos/id/55/200/300" alt="">
+                <img class="w-full grayscale-100 transition transform duration-200 hover:grayscale-[0%] hover:scale-[1.1]" src="https://picsum.photos/id/58/200/300" alt="">
+                <img class="w-full grayscale-100 transition transform duration-200 hover:grayscale-[0%] hover:scale-[1.1]" src="https://picsum.photos/id/59/200/300" alt="">
+            </div>
+        </div>
+        <img id="nextBtn" src="right-arrow.png" alt="">
+    </div>
+
+    <script>
+
+const scrollCont =  document.getElementById("scrollCont");
+const backBtn =  document.getElementById("backBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+
+scrollCont.addEventListener("wheel", (event)=> {
+    event.preventDefault;
+    scrollCont.scrollLeft += event.deltaY;
+    scrollCont.style.transitionDelay = "3s";
+    scrollCont.style.scrollBehavior = "auto";
+});
+
+backBtn.addEventListener("click", ()=>{
+    scrollCont.style.scrollBehavior = "smooth";
+    scrollCont.scrollLeft -= 600;
+});
+
+
+nextBtn.addEventListener("click", ()=>{
+    scrollCont.style.scrollBehavior = "smooth";
+    scrollCont.scrollLeft += 600;
+});
+
+
+    </script>
+</body>
+</html>

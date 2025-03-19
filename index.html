@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Project Using JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="h-[80vh] flex justify-center items-center flex-col gap-8">
+    <h1 class="text-3xl font-bold">Creating Slider Using JavaScript
+    </h1>
+
+    <div class="flex gap-4 justify-center items-center">
+        <img id="slideLeftBtn" class="slideBtn rotate-180" src="right-arrow.png" alt="">
+   
+    <div class="overflow-hidden p-4 bg-gray-300">
+        <div id="imageContainer" class="flex w-[616px] gap-4 transition-all duration-1000">
+            <img src="https://picsum.photos/id/1/300/250" alt="" class="image object-cover">
+            <img src="https://picsum.photos/id/2/300/250" alt="" class="image object-cover">
+            <img src="https://picsum.photos/id/3/300/250" alt="" class="image object-cover">
+            <img src="https://picsum.photos/id/4/300/250" alt="" class="image object-cover">
+        </div>
+    </div>
+
+    <img id="slideRightBtn" class="slideBtn transition-all duration-3000" src="right-arrow.png" alt="">
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
