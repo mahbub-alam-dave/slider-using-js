@@ -47,7 +47,7 @@ body {
     height: 100vh;
 }
 
-.card__container {
+.container .card__container {
     padding-block: 5rem;
 }
 
